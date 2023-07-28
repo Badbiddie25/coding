@@ -4,6 +4,24 @@
 # information. Use the function to make three dictionaries representing different 
 # albums. Print each return value to show that the dictionaries are storing the 
 # album information correctly.
+
 # Add an optional parameter to make_album() that allows you to store the 
 # number of tracks on an album. If the calling line includes a value for the number of tracks, add that value to the album’s dictionary. Make at least one new 
 # function call that includes the number of tracks on an album.
+
+
+def make_album(name,title,tracks=None):
+    name_dict={'name':name, "title":title}
+    if tracks != None:
+        name_dict['tracks'] = tracks
+
+    return name_dict
+    return name_dict['name'] + ', ' + name_dict['title']
+
+
+print(make_album("Frank", "Blonde"))
+print(make_album("Taylor Swift", "Fearless"))
+print(make_album("King Giz","Pop in my Step"))
+print(make_album("Jimi Hendrix","Axis: Bold as Love", 4))
+
+    
